@@ -1,0 +1,103 @@
+VERSION 5.00
+Object = "{B2110643-3E81-11D3-8ACC-00C04FF20A5D}#1.2#0"; "TransProv.dll"
+Object = "{9C37E835-6A58-11D1-80C0-0020AF7093F9}#1.2#0"; "Dl.ocx"
+Object = "{6C4DD4AB-27D5-11D3-96C4-000000000000}#1.0#0"; "S3ELineOutTcp.ocx"
+Object = "{DA559591-71AC-11D3-8B0E-00C04FF20A5D}#1.0#0"; "DlWait.ocx"
+Object = "{BD8177C0-832C-11CF-BF42-0020AF7093F9}#1.0#0"; "SDOIdc.ocx"
+Object = "{192DFCF0-F664-11D3-8BD4-00C04FF20A5D}#1.1#0"; "AdvBrowser.ocx"
+Object = "{EACE4ED6-6930-11D0-AC6C-0020AFBDD1D4}#1.0#0"; "SDOFep.ocx"
+Object = "{E64F71A6-E705-4151-9895-5138B7D67F3A}#1.0#0"; "CHPrj.ocx"
+Begin VB.Form Idle 
+   Caption         =   "Trans_Idle"
+   ClientHeight    =   2115
+   ClientLeft      =   195
+   ClientTop       =   450
+   ClientWidth     =   4215
+   Icon            =   "Trans_idle.frx":0000
+   LinkTopic       =   "Form1"
+   ScaleHeight     =   2115
+   ScaleWidth      =   4215
+   WindowState     =   1  'Minimized
+   Begin S3EADVBROWSERLibCtl.AdvBrowser Browser 
+      Height          =   375
+      Left            =   240
+      OleObjectBlob   =   "Trans_idle.frx":08CA
+      TabIndex        =   6
+      Top             =   1680
+      Width           =   2055
+   End
+   Begin CHPRJLib.CHPrj SDOPrj 
+      Height          =   615
+      Left            =   120
+      TabIndex        =   2
+      Top             =   960
+      Width           =   1215
+      _Version        =   65536
+      _ExtentX        =   2143
+      _ExtentY        =   1085
+      _StockProps     =   1
+   End
+   Begin DLWaitLibCtl.DLWait S3EDLWaitFreshFitTable 
+      Height          =   375
+      Left            =   2400
+      OleObjectBlob   =   "Trans_idle.frx":08F0
+      TabIndex        =   5
+      Top             =   1680
+      Width           =   1575
+   End
+   Begin TRANSPROVLibCtl.TransactionProvider S3ETrans 
+      Height          =   615
+      Left            =   1440
+      OleObjectBlob   =   "Trans_idle.frx":0940
+      TabIndex        =   4
+      Top             =   120
+      Width           =   1215
+   End
+   Begin SDOFepLibCtl.SDOFep SDOFep 
+      Height          =   690
+      Left            =   2895
+      OleObjectBlob   =   "Trans_idle.frx":0974
+      TabIndex        =   3
+      Top             =   900
+      Width           =   1260
+   End
+   Begin SDOIdcLibCtl.SDOIdc SDOIdc 
+      Height          =   690
+      Left            =   135
+      OleObjectBlob   =   "Trans_idle.frx":099E
+      TabIndex        =   1
+      Top             =   90
+      Width           =   1215
+   End
+   Begin VB.Timer TimerIdle 
+      Enabled         =   0   'False
+      Interval        =   3000
+      Left            =   3480
+      Top             =   240
+   End
+   Begin VB.Timer TimerAction 
+      Enabled         =   0   'False
+      Interval        =   100
+      Left            =   2760
+      Top             =   240
+   End
+   Begin S3ELINEOUTLib.S3ELineOut S3ELineOut 
+      Height          =   750
+      Left            =   1410
+      TabIndex        =   0
+      Top             =   855
+      Width           =   1425
+      _Version        =   65536
+      _ExtentX        =   2514
+      _ExtentY        =   1323
+      _StockProps     =   1
+   End
+   Begin DLLib.DL Pcb3dl 
+      Left            =   1440
+      Top             =   885
+      _Version        =   65538
+      _ExtentX        =   2355
+      _ExtentY        =   1191
+      _StockProps     =   0
+   End
+End

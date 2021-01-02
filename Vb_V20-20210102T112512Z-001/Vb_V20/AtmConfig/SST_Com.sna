@@ -1,0 +1,80 @@
+[SSTSRV]
+#Kind=TCP
+Kind=SNA
+ConnectTimeout=5
+RetryWait=1
+RecvTimeOut=30
+#FileTransmitPort=2054
+UseUDP=0
+ProgramID=none
+#m_libpath=TCPCommDLL.dll
+m_libpath=c:\win3270\SnaCommDLL.dll
+RetryNumber=1
+#BlockingMode: 1--Blocking Mode; 0--NonBlocking Mode
+BlockingMode=1
+PrimaryServer=127.0.0.1
+PrimaryPort=12007
+#PrimaryServerConnectMode: 0--Long Time Connection; 1--Sync Short Time Connection; 2--Async Short Time Connection
+PrimaryServerConnectMode=0
+SecondaryServer=127.0.0.1
+SecondaryPort=1001
+#SecondaryServerConnectMode: 0--Long Time Connection; 1--Sync Short Time Connection; 2--Async Short Time Connection
+SecondaryServerConnectMode=0
+ThirdServer=127.0.0.1
+ThirdPort=1001
+#ThirdServerConnectMode: 0--Long Time Connection; 1--Sync Short Time Connection; 2--Async Short Time Connection
+ThirdServerConnectMode=0
+#FormatOfMsgPeek: short/int/long/DWORD/char;len
+FormatOfMsgPeek=char;0;
+
+#SNA Config
+Ascii2Ebcdic=1         
+                       #是否转换ASCII码到EBCDIC码
+LU=02                  
+                       #LU类型号。要凑齐两位
+LuModuleName=
+                       #LU模块名
+UserName=             
+                       #用户名
+PassWord=             
+                       #密码
+SendTimeOut=8             
+                       #发送超时时间，以秒为单位
+RecvTimeOut=8             
+                       #接收超时时间，以秒为单位
+TerminalHead=020000
+                       #ATMC发到HOST附加的报文头。为16进制形式，比如3133则为0x310x33，个数为2的倍数
+TerminalTail=03
+                       #ATMC发到HOST附加的报文尾。为16进制形式，比如3133则为0x310x33，个数为2的倍数
+HostHead=02
+                       #HOST发到ATMC附加的报文头。为16进制形式，比如3133则为0x310x33，个数为2的倍数
+HostTail=
+                       #HOST发到ATMC附加的报文尾为16进制形式，比如3133则为0x310x33，个数为2的倍数
+
+[SST_SRV]
+PrimaryPort=4007
+Kind=SNA
+m_libpath=c:\win3270\SnaCommDLL.dll
+#m_libpath=TCPCommDLL.dll
+RECVTimeOut=30
+ProgID=none
+CloseAfterSend=1
+SecondaryServer=127.0.0.1
+SecondaryPort=4007
+#FormatOfMsgPeek: short/int/long/DWORD/char;len
+FormatOfMsgPeek=char;0;
+
+#SNA Config
+Ascii2Ebcdic=1         
+                       #是否转换ASCII码到EBCDIC码
+LU=01                  
+                       #LU类型号。
+SendTimeOut=30             
+                       #发送超时时间，以秒为单位
+RecvTimeOut=30             
+                       #接收超时时间，以秒为单位
+TerminalHead=020000
+                       #ATMC发到HOST附加的报文头。为16进制形式，比如3133则为0x310x33，个数为2的倍数
+TerminalTail=03
+                       #ATMC发到HOST附加的报文尾。为16进制形式，比如3133则为0x310x33，个数为2的倍数
+

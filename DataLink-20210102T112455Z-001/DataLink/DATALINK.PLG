@@ -1,0 +1,79 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: DataLink - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\johnny\LOCALS~1\Temp\RSP5.tmp" with contents
+[
+/nologo /Gz /MD /W3 /GX /O2 /I "..\include" /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "DATALINK" /FR".\Release/" /Fp".\Release/DataLink.pch" /YX /Fo".\Release/" /Fd".\Release/" /FD /c 
+"E:\optevasource\BOC\Vc\DataLink\DlGlobal.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\johnny\LOCALS~1\Temp\RSP5.tmp" 
+Creating temporary file "C:\DOCUME~1\johnny\LOCALS~1\Temp\RSP6.tmp" with contents
+[
+user32.lib advapi32.lib /nologo /subsystem:windows /dll /incremental:no /pdb:".\Release/DataLink.pdb" /debug /machine:I386 /def:".\DataLink.def" /out:"..\BIN\DataLink.dll" /implib:"../S3Elib/datalink.lib" 
+.\Release\DataLink.obj
+.\Release\DefaultFormatting.obj
+.\Release\DlCashIn.obj
+.\Release\DlCwd.obj
+.\Release\DLfit.obj
+.\Release\dlgeneral.obj
+.\Release\DlGlobal.obj
+.\Release\DLHostCmd.obj
+.\Release\DlHostReturn.obj
+.\Release\DlHtml.obj
+.\Release\DlHtmlWork.obj
+.\Release\DLIcbc.obj
+.\Release\DlLine.obj
+.\Release\DLOper.obj
+.\Release\DlOpteva.obj
+.\Release\DlPinChange.obj
+.\Release\DlPininput.obj
+.\Release\DlPrrFields.obj
+.\Release\DlTotals.obj
+.\Release\DlTransfer.obj
+.\Release\DataLink.res
+]
+Creating command line "link.exe @C:\DOCUME~1\johnny\LOCALS~1\Temp\RSP6.tmp"
+<h3>Output Window</h3>
+Compiling...
+DlGlobal.cpp
+Linking...
+   Creating library ../S3Elib/datalink.lib and object ../S3Elib/datalink.exp
+Creating temporary file "C:\DOCUME~1\johnny\LOCALS~1\Temp\RSPA.tmp" with contents
+[
+/nologo /o".\Release/DataLink.bsc" 
+.\Release\DataLink.sbr
+.\Release\DefaultFormatting.sbr
+.\Release\DlCashIn.sbr
+.\Release\DlCwd.sbr
+.\Release\DLfit.sbr
+.\Release\dlgeneral.sbr
+.\Release\DlGlobal.sbr
+.\Release\DLHostCmd.sbr
+.\Release\DlHostReturn.sbr
+.\Release\DlHtml.sbr
+.\Release\DlHtmlWork.sbr
+.\Release\DLIcbc.sbr
+.\Release\DlLine.sbr
+.\Release\DLOper.sbr
+.\Release\DlOpteva.sbr
+.\Release\DlPinChange.sbr
+.\Release\DlPininput.sbr
+.\Release\DlPrrFields.sbr
+.\Release\DlTotals.sbr
+.\Release\DlTransfer.sbr]
+Creating command line "bscmake.exe @C:\DOCUME~1\johnny\LOCALS~1\Temp\RSPA.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+DataLink.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

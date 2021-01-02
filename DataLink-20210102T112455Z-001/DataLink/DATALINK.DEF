@@ -1,0 +1,11 @@
+; DataLink.def : Declares the module parameters for the DLL.
+
+DESCRIPTION 'DATALINK Windows Dynamic Link Library'
+
+SECTIONS .DLSM READ WRITE SHARED
+
+EXPORTS
+    ; //////////////////////////////////////////////////////////////
+    ; // Global functions
+    ; //////////////////////////////////////////////////////////////
+    DllMain

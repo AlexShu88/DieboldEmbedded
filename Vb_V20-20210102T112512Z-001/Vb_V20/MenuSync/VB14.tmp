@@ -1,0 +1,107 @@
+VERSION 5.00
+Object = "{B2110643-3E81-11D3-8ACC-00C04FF20A5D}#1.2#0"; "TransProv.dll"
+Object = "{6C4DD4AB-27D5-11D3-96C4-000000000000}#1.0#0"; "S3ELineOutTcp.ocx"
+Object = "{9C37E835-6A58-11D1-80C0-0020AF7093F9}#1.2#0"; "Dl.ocx"
+Object = "{3751B5D1-D348-11D0-AD02-0060970C3D2F}#1.0#0"; "SDOPrr.ocx"
+Object = "{192DFCF0-F664-11D3-8BD4-00C04FF20A5D}#1.1#0"; "AdvBrowser.ocx"
+Object = "{5C094E41-67D2-11D0-AC6B-0020AFBDD1D4}#1.0#0"; "SDOCdm.ocx"
+Object = "{E64F71A6-E705-4151-9895-5138B7D67F3A}#1.0#0"; "CHPrj.ocx"
+Begin VB.Form Menu 
+   Caption         =   "MenuCashIn"
+   ClientHeight    =   2085
+   ClientLeft      =   60
+   ClientTop       =   345
+   ClientWidth     =   4245
+   Icon            =   "Menu.frx":0000
+   LinkTopic       =   "Form1"
+   MaxButton       =   0   'False
+   ScaleHeight     =   2085
+   ScaleWidth      =   4245
+   StartUpPosition =   3  'Windows Default
+   WindowState     =   1  'Minimized
+   Begin CHPRJLib.CHPrj SDOPrj 
+      Height          =   615
+      Left            =   1440
+      TabIndex        =   6
+      Top             =   840
+      Width           =   1215
+      _Version        =   65536
+      _ExtentX        =   2143
+      _ExtentY        =   1085
+      _StockProps     =   1
+   End
+   Begin TRANSPROVLibCtl.TransactionProvider S3ETrans 
+      Height          =   660
+      Left            =   120
+      OleObjectBlob   =   "Menu.frx":0E42
+      TabIndex        =   5
+      Top             =   840
+      Width           =   1215
+   End
+   Begin S3EADVBROWSERLibCtl.AdvBrowser Browser 
+      Height          =   420
+      Left            =   165
+      OleObjectBlob   =   "Menu.frx":0E76
+      TabIndex        =   4
+      Top             =   1620
+      Width           =   1995
+   End
+   Begin SDOPrrLibCtl.SDOPrr S3EPrr 
+      Height          =   645
+      Left            =   1455
+      OleObjectBlob   =   "Menu.frx":0E9C
+      TabIndex        =   3
+      Top             =   120
+      Width           =   1215
+   End
+   Begin SDOCdmLibCtl.SDOCdm S3ECdm 
+      Height          =   645
+      Left            =   120
+      OleObjectBlob   =   "Menu.frx":0ECC
+      TabIndex        =   2
+      Top             =   120
+      Width           =   1215
+   End
+   Begin VB.Timer TimerAction 
+      Enabled         =   0   'False
+      Interval        =   100
+      Left            =   1665
+      Top             =   1680
+   End
+   Begin S3ELINEOUTLib.S3ELineOut S3ELineOut 
+      Height          =   765
+      Left            =   2670
+      TabIndex        =   1
+      Top             =   795
+      Width           =   1395
+      _Version        =   65536
+      _ExtentX        =   2461
+      _ExtentY        =   1349
+      _StockProps     =   1
+   End
+   Begin VB.CommandButton Start 
+      Caption         =   "Start"
+      BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   12
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   660
+      Left            =   2730
+      TabIndex        =   0
+      Top             =   120
+      Width           =   1305
+   End
+   Begin DLLib.DL Pcb3Dl 
+      Left            =   2685
+      Top             =   840
+      _Version        =   65538
+      _ExtentX        =   2275
+      _ExtentY        =   1164
+      _StockProps     =   0
+   End
+End
